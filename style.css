@@ -1,0 +1,216 @@
+/* Mr Bulkeley and the Privateer — site styles */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English:ital@0;1&display=swap');
+
+:root {
+  --ink: #2b2620;
+  --parchment: #f6f1e5;
+  --parchment-dark: #ece3d0;
+  --navy: #1d3450;
+  --navy-deep: #142538;
+  --gold: #b08d3e;
+  --gold-light: #d4b878;
+  --rule: #c9bda3;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'EB Garamond', Georgia, serif;
+  background: var(--parchment);
+  color: var(--ink);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* Header & navigation */
+header {
+  background: var(--navy-deep);
+  color: var(--parchment);
+  text-align: center;
+  padding: 1.2rem 1rem 0.8rem;
+}
+header .site-title {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+}
+header .site-title a { color: var(--parchment); text-decoration: none; }
+nav {
+  background: var(--navy);
+  text-align: center;
+  padding: 0.5rem 0;
+  border-bottom: 3px solid var(--gold);
+}
+nav a {
+  color: var(--parchment);
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  display: inline-block;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  font-size: 1.05rem;
+}
+nav a:hover, nav a.current { color: var(--gold-light); }
+
+/* Hero (home page) */
+.hero {
+  background: linear-gradient(rgba(20,37,56,0.85), rgba(20,37,56,0.92)),
+    var(--navy-deep);
+  color: var(--parchment);
+  text-align: center;
+  padding: 4.5rem 1.5rem;
+}
+.hero h1 {
+  font-family: 'IM Fell English', serif;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+.hero .subtitle {
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--gold-light);
+  max-width: 40em;
+  margin: 0 auto 1.5rem;
+}
+.hero .coming-soon {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  padding: 0.35rem 1.4rem;
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+  margin-top: 1rem;
+}
+
+/* Main content */
+main {
+  max-width: 46em;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3.5rem;
+}
+h2 {
+  font-family: 'IM Fell English', serif;
+  font-weight: 400;
+  font-size: 1.9rem;
+  color: var(--navy);
+  margin: 2rem 0 0.8rem;
+}
+h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin: 1.6rem 0 0.5rem;
+}
+main p { margin-bottom: 1rem; }
+main a { color: var(--navy); }
+
+blockquote {
+  border-left: 3px solid var(--gold);
+  background: var(--parchment-dark);
+  padding: 1rem 1.4rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+blockquote cite { display: block; font-style: normal; font-size: 0.95rem; margin-top: 0.5rem; color: #6b5f49; }
+
+hr.flourish {
+  border: none;
+  text-align: center;
+  margin: 2.5rem auto;
+}
+hr.flourish::after {
+  content: "⚓ ✦ ⚓";
+  color: var(--gold);
+  letter-spacing: 1em;
+  font-size: 0.9rem;
+}
+
+/* Character cards */
+.cast-entry {
+  background: var(--parchment-dark);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 1rem 1.3rem;
+  margin-bottom: 1rem;
+}
+.cast-entry .name { font-weight: 600; color: var(--navy); font-size: 1.2rem; }
+.cast-entry .role { font-style: italic; color: #6b5f49; }
+.cast-entry .view { margin-top: 0.4rem; }
+.cast-entry .view::before { content: "Mr Bulkeley's view: "; font-variant: small-caps; color: var(--gold); font-style: normal; }
+
+/* Two-column feature blocks (home) */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin: 2rem 0;
+}
+.feature {
+  background: var(--parchment-dark);
+  border-top: 3px solid var(--gold);
+  padding: 1.2rem 1.3rem;
+}
+.feature h3 { margin-top: 0; }
+.feature a { font-variant: small-caps; letter-spacing: 0.05em; }
+
+/* Book display */
+.book-block {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+.book-block img {
+  width: 240px;
+  max-width: 100%;
+  border: 1px solid var(--rule);
+  box-shadow: 0 4px 14px rgba(43,38,32,0.25);
+}
+.book-block .book-text { flex: 1; min-width: 260px; }
+.buy-button {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--parchment);
+  text-decoration: none;
+  padding: 0.6rem 1.6rem;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  font-size: 1.1rem;
+  border: 1px solid var(--gold);
+  margin-top: 0.8rem;
+}
+.buy-button:hover { background: var(--navy-deep); color: var(--gold-light); }
+.book-details {
+  font-size: 1rem;
+  color: #6b5f49;
+  margin-top: 1rem;
+}
+
+/* Events */
+.event {
+  background: var(--parchment-dark);
+  border-left: 3px solid var(--gold);
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 1.2rem;
+}
+.event .event-date {
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  font-weight: 600;
+}
+.event .event-venue { font-weight: 600; color: var(--navy); font-size: 1.2rem; }
+.event p { margin: 0.4rem 0 0; }
+
+/* Footer */
+footer {
+  background: var(--navy-deep);
+  color: #9fb0c4;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.95rem;
+}
+footer a { color: var(--gold-light); }
