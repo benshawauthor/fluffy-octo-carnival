@@ -214,3 +214,26 @@ footer {
   font-size: 0.95rem;
 }
 footer a { color: var(--gold-light); }
+
+/* Image rows (figures with captions) */
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.image-row figure {
+  flex: 1 1 240px;
+  margin: 0;
+}
+.image-row img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  box-shadow: 0 4px 14px rgba(43,38,32,0.25);
+}
+.image-row figcaption {
+  font-size: 0.9rem;
+  color: #6b5f49;
+  margin-top: 0.5rem;
+}
