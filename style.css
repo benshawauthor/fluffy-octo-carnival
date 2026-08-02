@@ -237,3 +237,28 @@ footer a { color: var(--gold-light); }
   color: #6b5f49;
   margin-top: 0.5rem;
 }
+
+/* Single portrait figure with credit */
+.portrait {
+  float: right;
+  max-width: 300px;
+  margin: 0.5rem 0 1.5rem 2rem;
+}
+.portrait img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  box-shadow: 0 4px 14px rgba(43,38,32,0.25);
+}
+.portrait figcaption {
+  font-size: 0.9rem;
+  color: #6b5f49;
+  margin-top: 0.5rem;
+}
+@media (max-width: 700px) {
+  .portrait {
+    float: none;
+    max-width: 100%;
+    margin: 1.5rem 0;
+  }
+}
