@@ -270,3 +270,21 @@ footer a { color: var(--gold-light); }
   gap: 1rem;
   margin-top: 1rem;
 }
+
+/* Single wide plate image, centred */
+.plate {
+  max-width: 640px;
+  margin: 2rem auto;
+}
+.plate img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  box-shadow: 0 4px 14px rgba(43,38,32,0.25);
+}
+.plate figcaption {
+  font-size: 0.9rem;
+  color: #6b5f49;
+  margin-top: 0.5rem;
+  text-align: center;
+}
