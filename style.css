@@ -204,6 +204,11 @@ hr.flourish::after {
 }
 .event .event-venue { font-weight: 600; color: var(--navy); font-size: 1.2rem; }
 .event p { margin: 0.4rem 0 0; }
+.event audio.interview {
+  display: block;
+  width: 100%;
+  margin-top: 0.9rem;
+}
 
 /* Footer */
 footer {
