@@ -293,3 +293,10 @@ footer a { color: var(--gold-light); }
   margin-top: 0.5rem;
   text-align: center;
 }
+
+/* Photo gallery: three across, two on small screens */
+.image-row.gallery { gap: 1rem; margin: 1.2rem 0 0.4rem; }
+.image-row.gallery figure { flex: 0 1 calc(33.333% - 0.67rem); }
+@media (max-width: 600px) {
+  .image-row.gallery figure { flex-basis: calc(50% - 0.5rem); }
+}
